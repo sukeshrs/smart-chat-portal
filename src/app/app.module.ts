@@ -11,8 +11,8 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
-
-import { DataService } from './data.service';
+import { DataService } from './app-navbar/data.service';
+import { ModelService } from './model/model.service';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -26,7 +26,7 @@ const routes: Routes = [
     AppNavbarComponent,
     AppFooterComponent,
     HomePageComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +37,7 @@ const routes: Routes = [
     HttpModule
   ],
   providers: [
+    ModelService,
     DataService,
     HttpClientModule
   ],
