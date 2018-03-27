@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { TimesNews } from "./times-news.model";
+import { Account } from "./account.model";
+import { Analytics } from "./analytics.model";
 
 @Injectable()
 export class ModelService {
-  articleResponse: TimesNews[];
+  accountResponse: Account[];
+  analyticsResponse: Analytics[];
   constructor() { }
 
 }
