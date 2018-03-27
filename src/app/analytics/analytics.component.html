@@ -1,7 +1,7 @@
 <main>
   <div class="container" style="height:1300px;">
     <section class="section feature-box pt-5">
-      <!--Grid row-->
+      <!--Start Grid row cards-->
       <div class="row">
 
         <!--Grid column-->
@@ -32,7 +32,7 @@
                       </div>
                   </div>
                   <!--/.Card-->
-        
+
                 </div>
         <!--Grid column-->
                 <!--Grid column-->
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <!--/.Card-->
-          
+
                   </div>
 
                           <!--Grid column-->
@@ -62,11 +62,20 @@
                 </div>
             </div>
             <!--/.Card-->
-  
+
           </div>
 
       </div>
-      <!--Grid row-->
+      <!--End Grid row cards-->
+      <!--Start Grid row chart-->
+      <div class="row">
+
+        <div [hidden]="!sessionsChart" style="position: relative; height: 500px">
+          <canvas id="canvas">{{ sessionsChart }}</canvas>
+        </div>
+
+      </div>
+      <!--End Grid row chart-->
     </section>
   </div>
 </main>
