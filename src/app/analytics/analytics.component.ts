@@ -33,6 +33,13 @@ export class AnalyticsComponent implements OnInit {
     );
   }
 
+  /*
+  * function : selectStatForPeriod
+  * This method restructures the response object and creates an object for a time frame
+  * when all is passed as an argument to the function , function iterates through the response 
+  * and just puts the entries for all time frame in stats object
+  */
+  //TODO -  Remove all the console logs
   selectStatForPeriod(period: string) {
     let analysticsResponse =  this.analytics;
     let statistics = <Stats>{};
