@@ -3,29 +3,29 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { HttpClient } from '@angular/common/http';
 import { HttpParams } from "@angular/common/http";
-import { TimesNews } from "../model/times-news.model";
+import { Account } from "../model/account.model";
 
 @Injectable()
 export class DataService {
 
-   private apiUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-   newsSource = 'New York Times';
+  private apiUrlAccount = "http://localhost:8080/smart-chat-portal/account/";
 
   constructor(private http: HttpClient) {
 
   }
 
-//Example http get method
-  public getDataToday(term: string): Observable <TimesNews[]> {
-  const params = new HttpParams().set('api-key', "8d88acef8b574bb59b9080cdd70e100e");
+  //Get Accounts
+  public getAccounts(): Observable <Account[]> {
+  const params = new HttpParams();
   return this.http
-    .get(this.apiUrl, { params })
-    .map(result => <TimesNews[]>result["response"]["docs"]);
+    .get(this.apiUrlAccount, { params })
+    .map(result => <Account[]>result);
 
   }
 
-  public getDataSource() {
-      return this.newsSource;
-  }
+  //Create Accounts
+  //Get Accounts by Type
+  //Get Accounts by name
+  //Remove Account by ID
 
 }

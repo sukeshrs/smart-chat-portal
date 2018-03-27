@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ModelService } from '../model/model.service';
-import { TimesNews } from "../model/times-news.model";
 
 @Component({
   selector: 'home-page',
