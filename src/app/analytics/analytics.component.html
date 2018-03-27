@@ -11,7 +11,7 @@
           <div class="card">
               <h4 class="card-header info-color white-text text-center">User Sessions</h4>
               <div class="card-body">
-                  <h4 class="card-title green-text text-center">100</h4>
+                  <h4 class="card-title green-text text-center">{{ analytics.distinct_session_all }}</h4>
                   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
               </div>
           </div>
@@ -27,7 +27,7 @@
                   <div class="card">
                       <h4 class="card-header mdb-color white-text text-center">Questions</h4>
                       <div class="card-body">
-                          <h4 class="card-title blue-text text-center">200</h4>
+                          <h4 class="card-title blue-text text-center">{{ analytics.all_questions_all }}</h4>
                           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                       </div>
                   </div>
@@ -42,7 +42,7 @@
                     <div class="card">
                         <h4 class="card-header success-color white-text">Un Answered</h4>
                         <div class="card-body">
-                            <h4 class="card-title text-center orange-text">30</h4>
+                            <h4 class="card-title text-center orange-text">{{ analytics.unanswered_questions_all }}</h4>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         </div>
                     </div>
