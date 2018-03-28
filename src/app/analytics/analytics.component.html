@@ -2,6 +2,9 @@
   <div class="container" style="height:1300px;">
     <section class="section feature-box pt-5">
 
+      <!--Start Grid row cards-->
+
+
       <div class="row pb-3">
         <div class="col-md-2  text-center">
           <button type="button" class="btn btn-light-blue waves-light text-center" (click) = "selectStatForPeriod('1_week')" mdbRippleRadius>1 Week</button>
@@ -25,6 +28,7 @@
       <h4 class="text-center">Chat Bot Analytics</h4>
       <hr>
       <!--Grid row-->
+
       <div class="row">
 
         <!--Grid column-->
@@ -83,13 +87,22 @@
               <h4 class="card-title text-center red-text">45</h4>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             </div>
-          </div>
+              </div>
           <!--/.Card-->
 
         </div>
 
       </div>
-      <!--Grid row-->
+      <!--End Grid row cards-->
+      <!--Start Grid row chart-->
+      <div class="row">
+
+        <div [hidden]="!sessionsChart" style="position: relative; height: 500px">
+          <canvas id="canvas">{{ sessionsChart }}</canvas>
+        </div>
+
+      </div>
+      <!--End Grid row chart-->
     </section>
   </div>
 </main>

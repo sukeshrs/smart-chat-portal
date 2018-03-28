@@ -3,7 +3,9 @@ import { Observable } from 'rxjs/Observable';
 import { AnalyticsService } from './analytics.service';
 import { ModelService } from '../model/model.service';
 import { Analytics } from "../model/analytics.model";
+import { Chart } from 'chart.js';
 import { Stats } from "../model/stats.model";
+
 
 @Component({
   selector: 'app-analytics',
@@ -12,7 +14,8 @@ import { Stats } from "../model/stats.model";
 })
 export class AnalyticsComponent implements OnInit {
 
-  analytics: Analytics[];
+  analytics: Analytics;
+  sessionsChart: Chart[];
   stats: Stats;
   allStats: any;
   constructor(
@@ -20,8 +23,6 @@ export class AnalyticsComponent implements OnInit {
     private analyticsService: AnalyticsService) { }
 
   ngOnInit() {
-
-    //Get all analytics onLoad
     this.analyticsService.getAnalyticsForBot().subscribe(
       data => {
         this.analytics = data
@@ -31,12 +32,59 @@ export class AnalyticsComponent implements OnInit {
       },
       error => console.log("ERROR ::" + error)
     );
+    this.createSessionChart();
+  }
+
+  //Example of charts
+  createSessionChart(){
+
+
+    let labels = ["months 1", "month 3", "month 6", "month 12"];
+    let data = [10,15,20,25];
+    // let data = [this.analytics.distinct_session_month,
+    //             this.analytics.distinct_session_3_month,
+    //             this.analytics.distinct_session_6_month,
+    //             this.analytics.distinct_session_12_month];
+    this.sessionsChart = new Chart('canvas', {
+          type: 'line',
+          data: {
+            labels: labels,
+            datasets: [{data}],
+            borderColor: 'rgb(255, 99, 132)',
+            borderWidth: 3
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            title: {
+              display: true,
+              text: 'Sessions'
+            },
+            responsive:true,
+            maintainAspectRatio: false,
+            scales: {
+              xAxes: [{
+                display: true
+              }],
+              yAxes: [{
+                display: true,
+                ticks: {
+                 max: 100,
+                 min: 0,
+                 stepSize: 10
+                }
+              }],
+            }
+          }
+        });
+
   }
 
   /*
   * function : selectStatForPeriod
   * This method restructures the response object and creates an object for a time frame
-  * when all is passed as an argument to the function , function iterates through the response 
+  * when all is passed as an argument to the function , function iterates through the response
   * and just puts the entries for all time frame in stats object
   */
   //TODO -  Remove all the console logs
