@@ -1,69 +1,92 @@
 <main>
   <div class="container" style="height:1300px;">
     <section class="section feature-box pt-5">
+
+      <div class="row pb-3">
+        <div class="col-md-2  text-center">
+          <button type="button" class="btn btn-light-blue waves-light text-center" (click) = "selectStatForPeriod('1_week')" mdbRippleRadius>1 Week</button>
+        </div>
+        <div class="col-md-2  text-center">
+          <button type="button" class="btn btn-light-blue waves-light text-center" (click) = "selectStatForPeriod('1_month')" mdbRippleRadius>1 Month</button>
+        </div>
+        <div class="col-md-2  text-center">
+          <button type="button" class="btn btn-light-blue waves-light text-center" (click) = "selectStatForPeriod('3_month')" mdbRippleRadius>3 months</button>
+        </div>
+        <div class="col-md-2  text-center">
+          <button type="button" class="btn btn-light-blue waves-light text-center"  (click) = "selectStatForPeriod('6_month')" mdbRippleRadius>6 months</button>
+        </div>
+        <div class="col-md-2  text-center">
+          <button type="button" class="btn btn-light-blue waves-light text-center"  (click) = "selectStatForPeriod('12_month')" mdbRippleRadius>One Year</button>
+        </div>
+        <div class="col-md-2  text-center">
+          <button type="button" class="btn btn-light-blue waves-light text-center"  (click) = "selectStatForPeriod('all')" mdbRippleRadius>All</button>
+        </div>
+      </div>
+      <h4 class="text-center">Chat Bot Analytics</h4>
+      <hr>
       <!--Grid row-->
       <div class="row">
 
         <!--Grid column-->
-        <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="col-md-3 col-sm-12 col-xs-12 smart-chat-card">
 
           <!--Card-->
           <div class="card">
-              <h4 class="card-header info-color white-text text-center">User Sessions</h4>
-              <div class="card-body">
-                  <h4 class="card-title green-text text-center">100</h4>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              </div>
+            <h4 class="card-header info-color white-text text-center">User Sessions</h4>
+            <div class="card-body">
+              <h4 class="card-title green-text text-center">{{stats?.sessions}}</h4>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
           </div>
           <!--/.Card-->
 
         </div>
         <!--Grid column-->
 
-               <!--Grid column-->
-               <div class="col-md-3 col-sm-12 col-xs-12">
-
-                  <!--Card-->
-                  <div class="card">
-                      <h4 class="card-header mdb-color white-text text-center">Questions</h4>
-                      <div class="card-body">
-                          <h4 class="card-title blue-text text-center">200</h4>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                  </div>
-                  <!--/.Card-->
-        
-                </div>
         <!--Grid column-->
-                <!--Grid column-->
-                <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="col-md-3 col-sm-12 col-xs-12 smart-chat-card">
 
-                    <!--Card-->
-                    <div class="card">
-                        <h4 class="card-header success-color white-text">Un Answered</h4>
-                        <div class="card-body">
-                            <h4 class="card-title text-center orange-text">30</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                    </div>
-                    <!--/.Card-->
-          
-                  </div>
-
-                          <!--Grid column-->
-        <div class="col-md-3 col-sm-12 col-xs-12">
-
-            <!--Card-->
-            <div class="card">
-                <h4 class="card-header indigo white-text">Webservice Redirected</h4>
-                <div class="card-body">
-                    <h4 class="card-title text-center red-text">45</h4>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                </div>
+          <!--Card-->
+          <div class="card">
+            <h4 class="card-header mdb-color white-text text-center">Questions</h4>
+            <div class="card-body">
+              <h4 class="card-title blue-text text-center">{{stats?.questions}}</h4>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             </div>
-            <!--/.Card-->
-  
           </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-md-3 col-sm-12 col-xs-12 smart-chat-card">
+
+          <!--Card-->
+          <div class="card">
+            <h4 class="card-header success-color white-text">Un Answered</h4>
+            <div class="card-body">
+              <h4 class="card-title text-center orange-text">{{stats?.unanswered}}</h4>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+          <!--/.Card-->
+
+        </div>
+
+        <!--Grid column-->
+        <div class="col-md-3 col-sm-12 col-xs-12 smart-chat-card">
+
+          <!--Card-->
+          <div class="card">
+            <h4 class="card-header indigo white-text">Webservice Redirected</h4>
+            <div class="card-body">
+              <h4 class="card-title text-center red-text">45</h4>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+          <!--/.Card-->
+
+        </div>
 
       </div>
       <!--Grid row-->
