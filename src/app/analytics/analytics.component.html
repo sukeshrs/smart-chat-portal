@@ -97,8 +97,11 @@
       <!--Start Grid row chart-->
       <div class="row">
 
-        <div [hidden]="!sessionsChart" style="position: relative; height: 500px">
-          <canvas id="canvas">{{ sessionsChart }}</canvas>
+        <div class="col-md-6 col-sm-12 col-xs-12 chart-container">
+          <canvas id="canvas1">{{ userSessionsChart }}</canvas>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 chart-container">
+          <canvas id="canvas2">{{ typeSessionsChart}}</canvas>
         </div>
 
       </div>

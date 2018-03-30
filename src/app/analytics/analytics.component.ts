@@ -15,7 +15,8 @@ import { Stats } from "../model/stats.model";
 export class AnalyticsComponent implements OnInit {
 
   analytics: Analytics;
-  sessionsChart: Chart[];
+  userSessionsChart: Chart[];
+  typeSessionsChart: Chart[];
   stats: Stats;
   allStats: any;
   constructor(
@@ -29,29 +30,39 @@ export class AnalyticsComponent implements OnInit {
         this.modelService.analyticsResponse = this.analytics;
         console.log(this.analytics);
         this.selectStatForPeriod('all');
+        this.createUserSessionChart();
+        this.createTypeSessionChart();
+
       },
       error => console.log("ERROR ::" + error)
     );
-    this.createSessionChart();
+
+
   }
 
   //Example of charts
-  createSessionChart(){
+  createUserSessionChart(){
 
+    let labels = ["year ago", "6 months ago", "3 months ago", "1 month ago", "1 week ago"];
 
-    let labels = ["months 1", "month 3", "month 6", "month 12"];
-    let data = [10,15,20,25];
-    // let data = [this.analytics.distinct_session_month,
-    //             this.analytics.distinct_session_3_month,
-    //             this.analytics.distinct_session_6_month,
-    //             this.analytics.distinct_session_12_month];
-    this.sessionsChart = new Chart('canvas', {
+    // let data = [Number(this.analytics.distinct_session_12_month),
+    //             Number(this.analytics.distinct_session_6_month),
+    //             Number(this.analytics.distinct_session_3_month),
+    //             Number(this.analytics.distinct_session_month),
+    //             Number(this.analytics.distinct_session_week)
+    //             ];
+    let data = [10, 30, 90, 40, 60];
+    this.userSessionsChart= new Chart('canvas1', {
           type: 'line',
           data: {
             labels: labels,
-            datasets: [{data}],
-            borderColor: 'rgb(255, 99, 132)',
-            borderWidth: 3
+            datasets: [{data,
+              backgroundColor:'rgb(51,181,229,.5)',
+              borderColor: 'rgb(51,181,229)',
+              borderWidth: 3
+
+            }]
+
           },
           options: {
             legend: {
@@ -59,7 +70,7 @@ export class AnalyticsComponent implements OnInit {
             },
             title: {
               display: true,
-              text: 'Sessions'
+              text: 'Total Distinct Sessions'
             },
             responsive:true,
             maintainAspectRatio: false,
@@ -76,6 +87,38 @@ export class AnalyticsComponent implements OnInit {
                 }
               }],
             }
+          }
+        });
+
+  }
+
+  createTypeSessionChart(){
+
+    let labels = ["Facebook", "Web"];
+
+    let data = [200, 300];
+    this.typeSessionsChart = new Chart('canvas2', {
+          type: 'pie',
+          data: {
+            labels: labels,
+            datasets: [{data,
+              backgroundColor:['rgb(59,89,152)','rgb(51,181,229)'],
+              hoverBackgroundColor:['rgb(59,89,152,.5)','rgb(51,181,229,.5)'],
+              borderWidth: 3
+
+            }]
+
+          },
+          options: {
+            legend: {
+              display: true
+            },
+            title: {
+              display: true,
+              text: 'Web Sessions/Facebook Sessions'
+            },
+            responsive:true,
+            maintainAspectRatio: false
           }
         });
 
