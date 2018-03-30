@@ -14,7 +14,6 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 
 import { AnalyticsService } from './analytics/analytics.service';
-import { DataService } from './app-navbar/data.service';
 import { ModelService } from './model/model.service';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -38,7 +37,6 @@ import { AppRoutingModule } from './app-routing.module';
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
     ModelService,
-    DataService,
     AnalyticsService
   ],
   bootstrap: [AppComponent]

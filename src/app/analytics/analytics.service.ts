@@ -13,13 +13,13 @@ export class AnalyticsService {
 
   //Get analytics for a single bot
   //TODO - The bot id is hard coded right now , this needs to be coming from the users session
-  getAnalyticsForBot(): Observable<any> {
+  getAnalyticsForBot(): Observable<Analytics> {
 
   let botId = '1';
   let url = this.apiUrlAnalytics + '/bot';
   let params = new HttpParams().set('botId', '1');
   return this.http
-    .get(url, { params })
+    .get<Analytics>(url, { params })
     .map(result => result[botId])
   }
 }
