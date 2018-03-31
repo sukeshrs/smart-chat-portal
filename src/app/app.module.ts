@@ -9,13 +9,12 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
-import { AnalyticsComponent } from './analytics/analytics.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 
-import { AnalyticsService } from './analytics/analytics.service';
 import { ModelService } from './model/model.service';
 import { AppRoutingModule } from './app-routing.module';
+import { AnalyticsFeatureModule } from './analytics-feature/analytics-feature.module';
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppNavbarComponent,
     AppFooterComponent,
     HomePageComponent,
-    LoginComponent,
-    AnalyticsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,12 +30,12 @@ import { AppRoutingModule } from './app-routing.module';
     MDBBootstrapModule.forRoot(),
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AnalyticsFeatureModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
-    ModelService,
-    AnalyticsService
+    ModelService
   ],
   bootstrap: [AppComponent]
 })

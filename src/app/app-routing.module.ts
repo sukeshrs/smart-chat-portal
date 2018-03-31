@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
-import { AnalyticsComponent } from './analytics/analytics.component';
+import { AnalyticsComponent } from './analytics-feature/analytics/analytics.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
