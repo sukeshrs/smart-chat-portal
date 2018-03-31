@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { AnalyticsService } from './analytics.service';
-import { ModelService } from '../model/model.service';
+import { ModelService } from '../../model/model.service';
 import { Analytics } from "../model/analytics.model";
 import { Chart } from 'chart.js';
 import { Stats } from "../model/stats.model";
@@ -94,9 +94,9 @@ export class AnalyticsComponent implements OnInit {
 
   createTypeSessionChart(){
 
-    let labels = ["Facebook", "Web"];
+    let labels = ["Facebook", "Web" , "Bla"];
 
-    let data = [200, 300];
+    let data = [200, 300 , 100];
     this.typeSessionsChart = new Chart('canvas2', {
           type: 'pie',
           data: {
