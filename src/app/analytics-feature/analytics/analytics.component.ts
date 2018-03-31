@@ -94,9 +94,9 @@ export class AnalyticsComponent implements OnInit {
 
   createTypeSessionChart(){
 
-    let labels = ["Facebook", "Web" , "Bla"];
+    let labels = ["Facebook", "Web"];
 
-    let data = [200, 300 , 100];
+    let data = [200, 300];
     this.typeSessionsChart = new Chart('canvas2', {
           type: 'pie',
           data: {
