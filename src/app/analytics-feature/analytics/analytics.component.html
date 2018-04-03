@@ -1,5 +1,5 @@
 <main>
-  <div class="container" style="height:1300px;">
+  <div class="container">
     <section class="section feature-box pt-5">
 
       <!--Start Grid row cards-->
@@ -27,7 +27,7 @@
 
           <!--Card-->
           <div class="card">
-            <h4 class="card-header info-color white-text text-center">User Sessions</h4>
+            <h5 class="card-header info-color white-text text-center">User Sessions</h5>
             <div class="card-body">
               <h4 class="card-title green-text text-center">{{stats?.sessions}}</h4>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -43,7 +43,7 @@
 
           <!--Card-->
           <div class="card">
-            <h4 class="card-header mdb-color white-text text-center">Questions</h4>
+            <h5 class="card-header mdb-color white-text text-center">Questions</h5>
             <div class="card-body">
               <h4 class="card-title blue-text text-center">{{stats?.questions}}</h4>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -58,7 +58,7 @@
 
           <!--Card-->
           <div class="card">
-            <h4 class="card-header success-color white-text">Un Answered</h4>
+            <h5 class="card-header success-color white-text text-center">Unanswered</h5>
             <div class="card-body">
               <h4 class="card-title text-center orange-text">{{stats?.unanswered}}</h4>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -73,7 +73,7 @@
 
           <!--Card-->
           <div class="card">
-            <h4 class="card-header indigo white-text">Webservice Redirected</h4>
+            <h5 class="card-header indigo white-text text-center">Webservice Redirected</h5>
             <div class="card-body">
               <h4 class="card-title text-center red-text">45</h4>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -100,6 +100,10 @@
 
       </div>
       <!--End Grid row chart-->
+ 
+      <sessions-table></sessions-table>
+
+
     </section>
   </div>
 </main>

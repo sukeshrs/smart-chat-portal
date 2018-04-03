@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { ModelService } from './model/model.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AnalyticsFeatureModule } from './analytics-feature/analytics-feature.module';
+import { BotConfigFeatureModule } from './bot-config-feature/bot-config-feature.module'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AnalyticsFeatureModule } from './analytics-feature/analytics-feature.mo
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    AnalyticsFeatureModule
+    AnalyticsFeatureModule,
+    BotConfigFeatureModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
