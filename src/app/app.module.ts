@@ -15,7 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { ModelService } from './model/model.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AnalyticsFeatureModule } from './analytics-feature/analytics-feature.module';
-import { BotConfigFeatureModule } from './bot-config-feature/bot-config-feature.module'
+import { BotConfigFeatureModule } from './bot-config-feature/bot-config-feature.module';
 
 @NgModule({
   declarations: [
