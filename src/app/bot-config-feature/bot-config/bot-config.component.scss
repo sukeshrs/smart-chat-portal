@@ -12,7 +12,8 @@
     color : #FFF;
     padding :12px;
   }
-  .right{
+
+   .right{
     display : flex;
     flex-direction: column;
     justify-content : center;
@@ -23,20 +24,27 @@
     
   }
 
-  .left-section{
-     margin : 20px;
-     box-shadow: 5px 5px 5px 2px #cec9c9;
-     background-color :#ffffff;
-  }
-
   .top{
-    background-color:rgba(208, 212, 212, 0.856);
     color :rgb(14, 30, 32);
+    align-self: stretch;
+
+    @media (min-width: 800px) { 
+        margin-left: 75px;
+        margin-right: 75px;
+        margin-top: 24px;
+      }
   }
 
   .bottom{
     background-color: #707070;
     color :rgb(104, 75, 82);
+    align-self: stretch;
+    @media (min-width: 800px) { 
+        margin-left: 75px;
+        margin-right: 75px;
+        padding-left: 48px;
+        padding-right: 100px;
+      }
   }
 
   @media (max-width: 1200px) { 
