@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from "@angular/router";
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
+import { SharedFeatureModule } from './shared-feature/shared-feature.module';
 import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
@@ -27,8 +25,7 @@ import { BotConfigFeatureModule } from './bot-config-feature/bot-config-feature.
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot(),
-    MDBBootstrapModule.forRoot(),
+    SharedFeatureModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
