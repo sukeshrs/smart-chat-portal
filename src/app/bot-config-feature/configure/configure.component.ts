@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'configure',
+  selector: 'configure-bot',
   templateUrl: './configure.component.html',
   styleUrls: ['./configure.component.scss']
 })

@@ -4,11 +4,19 @@ import { BotConfigComponent } from './bot-config/bot-config.component';
 import { DisplayBotComponent } from './display-bot/display-bot.component';
 import { ConfigureComponent } from './configure/configure.component';
 import { SharedFeatureModule } from '../shared-feature/shared-feature.module';
+import { BotConfigRoutingModule } from './bot-config-routing.module';
+import { DisplayTopicsComponent } from './display-topics/display-topics.component';
 
 @NgModule({
   imports: [
-    SharedFeatureModule
+    SharedFeatureModule,
+    BotConfigRoutingModule
   ],
-  declarations: [BotConfigComponent, DisplayBotComponent, ConfigureComponent]
+  declarations: [
+    BotConfigComponent,
+    DisplayBotComponent,
+    ConfigureComponent,
+    DisplayTopicsComponent
+  ]
 })
 export class BotConfigFeatureModule { }
