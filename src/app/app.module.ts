@@ -11,9 +11,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 
 import { ModelService } from './model/model.service';
-import { AppRoutingModule } from './app-routing.module';
 import { AnalyticsFeatureModule } from './analytics-feature/analytics-feature.module';
-import { BotConfigFeatureModule } from './bot-config-feature/bot-config-feature.module'
+import { BotConfigFeatureModule } from './bot-config-feature/bot-config-feature.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,9 +28,9 @@ import { BotConfigFeatureModule } from './bot-config-feature/bot-config-feature.
     SharedFeatureModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule,
     AnalyticsFeatureModule,
-    BotConfigFeatureModule
+    BotConfigFeatureModule,
+    AppRoutingModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
