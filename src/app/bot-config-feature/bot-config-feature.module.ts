@@ -6,6 +6,7 @@ import { ConfigureComponent } from './configure/configure.component';
 import { SharedFeatureModule } from '../shared-feature/shared-feature.module';
 import { BotConfigRoutingModule } from './bot-config-routing.module';
 import { DisplayTopicsComponent } from './display-topics/display-topics.component';
+import { CreateBotComponent } from './create-bot/create-bot.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { DisplayTopicsComponent } from './display-topics/display-topics.componen
     BotConfigComponent,
     DisplayBotComponent,
     ConfigureComponent,
-    DisplayTopicsComponent
+    DisplayTopicsComponent,
+    CreateBotComponent
   ]
 })
 export class BotConfigFeatureModule { }
