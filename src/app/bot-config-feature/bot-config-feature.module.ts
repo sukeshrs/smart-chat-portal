@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BotConfigComponent } from './bot-config/bot-config.component';
 import { DisplayBotComponent } from './display-bot/display-bot.component';
-import { ConfigureComponent } from './configure/configure.component';
 import { SharedFeatureModule } from '../shared-feature/shared-feature.module';
 import { BotConfigRoutingModule } from './bot-config-routing.module';
-import { DisplayTopicsComponent } from './display-topics/display-topics.component';
+import { TopicListComponent } from './topic-list/topic-list.component';
+import { StartConfigComponent } from './start-config/start-config.component';
+import { TopicCustomNameComponent } from './topic-custom-name/topic-custom-name.component';
+import { TopicDetailsComponent } from './topic-details/topic-details.component';
 
 @NgModule({
   imports: [
@@ -15,8 +17,10 @@ import { DisplayTopicsComponent } from './display-topics/display-topics.componen
   declarations: [
     BotConfigComponent,
     DisplayBotComponent,
-    ConfigureComponent,
-    DisplayTopicsComponent
+    TopicListComponent,
+    StartConfigComponent,
+    TopicCustomNameComponent,
+    TopicDetailsComponent
   ]
 })
 export class BotConfigFeatureModule { }

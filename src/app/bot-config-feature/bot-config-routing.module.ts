@@ -1,18 +1,20 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { BotConfigComponent } from './bot-config/bot-config.component';
 import { DisplayBotComponent } from './display-bot/display-bot.component';
-import { DisplayTopicsComponent } from './display-topics/display-topics.component';
-import { ConfigureComponent } from './configure/configure.component';
+import { TopicListComponent } from './topic-list/topic-list.component';
+import { TopicCustomNameComponent } from './topic-custom-name/topic-custom-name.component';
+import { TopicDetailsComponent } from './topic-details/topic-details.component';
+import { StartConfigComponent } from './start-config/start-config.component';
 
 const botConfigRoutes: Routes = [
   {
     path: 'configure',
     component: BotConfigComponent,
     children: [
-      {path: 'create-bot', component: ConfigureComponent},
-      {path: 'topics', component: DisplayTopicsComponent}
+      {path: 'create-bot', component: StartConfigComponent},
+      {path: 'choose-topics', component:  TopicCustomNameComponent},
+      {path: 'topic-details', component:  TopicDetailsComponent}
     ]
   }
 ];
