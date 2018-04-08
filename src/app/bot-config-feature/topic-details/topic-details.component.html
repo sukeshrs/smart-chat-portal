@@ -1,15 +1,25 @@
 <div>
-  <div class="card">
-
-      <!--Card content-->
-      <div class="card-body">
-          <div class="md-form">
-              <input mdbActive type="text" id="form1" class="form-control">
-              <label for="form1" class="">Topic Details</label>
-          </div>
-      </div>
-        <button routerLink="/configure/choose-topics" type="button" class="btn btn-indigo">Save Topic</button>
-
-  </div>
-  <topic-list></topic-list>
+    <div class="card text-center">
+        <!--Card content-->
+        <div class="card-body">
+            <div class="md-form form-sm">
+                <input mdbActive type="text" id="form1" class="form-control">
+                <label for="form1" class="">Details Label1</label>
+            </div>
+            <div class="md-form form-sm">
+                <input mdbActive type="text" id="form2" class="form-control">
+                <label for="form2" class="">Details Label2</label>
+            </div>
+            <div class="md-form form-sm">
+                <input mdbActive type="text" id="form3" class="form-control">
+                <label for="form3" class="">Details Label3</label>
+            </div>
+            <div class="md-form form-sm">
+                <input mdbActive type="text" id="form4" class="form-control">
+                <label for="form4" class="">Details Label4</label>
+            </div>
+            <button routerLink="/configure/choose-topics" type="button" class="btn btn-indigo">Save Topic</button>
+        </div>
+    </div>
+    <topic-list></topic-list>
 </div>
