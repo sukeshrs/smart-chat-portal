@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConfigureComponent } from './configure.component';
+import { TopicCustomNameComponent } from './topic-custom-name.component';
 
-describe('ConfigureComponent', () => {
-  let component: ConfigureComponent;
-  let fixture: ComponentFixture<ConfigureComponent>;
+describe('TopicCustomNameComponent', () => {
+  let component: TopicCustomNameComponent;
+  let fixture: ComponentFixture<TopicCustomNameComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConfigureComponent ]
+      declarations: [ TopicCustomNameComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ConfigureComponent);
+    fixture = TestBed.createComponent(TopicCustomNameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
