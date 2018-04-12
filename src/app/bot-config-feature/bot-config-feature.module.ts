@@ -8,6 +8,7 @@ import { TopicListComponent } from './topic-list/topic-list.component';
 import { StartConfigComponent } from './start-config/start-config.component';
 import { TopicCustomNameComponent } from './topic-custom-name/topic-custom-name.component';
 import { TopicDetailsComponent } from './topic-details/topic-details.component';
+import { BotConfigDashboardComponent } from './bot-config-dashboard/bot-config-dashboard.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { TopicDetailsComponent } from './topic-details/topic-details.component';
     TopicListComponent,
     StartConfigComponent,
     TopicCustomNameComponent,
-    TopicDetailsComponent
+    TopicDetailsComponent,
+    BotConfigDashboardComponent
   ]
 })
 export class BotConfigFeatureModule { }
