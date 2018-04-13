@@ -10,10 +10,13 @@ import { BotConfigDashboardComponent } from './bot-config-dashboard/bot-config-d
 
 const botConfigRoutes: Routes = [
   {
+    path: 'dashboard',
+    component: BotConfigDashboardComponent,
+  },
+  {
     path: 'configure',
     component: BotConfigComponent,
     children: [
-      {path: 'dashboard', component: BotConfigDashboardComponent},
       {path: 'create-bot', component: StartConfigComponent},
       {path: 'choose-topics', component:  TopicCustomNameComponent},
       {path: 'topic-details', component:  TopicDetailsComponent}
