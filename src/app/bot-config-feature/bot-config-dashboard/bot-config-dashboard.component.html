@@ -1,52 +1,51 @@
-<div class="card">
-  <div class="card-body">
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">Your Bots</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Settings</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#references" role="tab" data-toggle="tab">How To</a>
-      </li>
-    </ul>
+<div class="container">
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane fade in active show" id="profile">
-        <div class="mt-2 text-right">
-          <button routerLink="/configure/create-bot" type="button" class="btn  btn-primary">Create New</button>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card mt-2">
-              <div class="card-header text-center success-color">
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title text-center">Eliza</h4>
-                <p class="card-text text-center">Status : Completed</p>
-                <button routerLink="/configure/create-bot" type="button" class="btn  btn-primary">Edit Bot</button>
-              </div>
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">Your Bots</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#references" role="tab" data-toggle="tab">How To</a>
+        </li>
+      </ul>
 
-            </div>
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active show" id="profile">
+          <div class="mt-2 text-right">
+            <button routerLink="/configure/create-bot" type="button" class="btn  btn-primary">Create New</button>
           </div>
-          <div class="col-md-3">
-            <div class="card mt-2">
-              <div class="card-header text-center info-color">
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title text-center">Robot</h4>
-                <p class="card-text">Status : In progress</p>
-                <button routerLink="/configure/choose-topics" type="button" class="btn  btn-primary">Configure</button>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mt-2">
+                <div class="card-header text-center success-color">
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title text-center">Eliza</h4>
+                  <p class="card-text text-center">Status : Completed</p>
+                  <button routerLink="/configure/create-bot" type="button" class="btn  btn-primary">Edit Bot</button>
+                </div>
+
               </div>
             </div>
+            <div class="col-md-3">
+              <div class="card mt-2">
+                <div class="card-header text-center info-color">
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title text-center">Robot</h4>
+                  <p class="card-text">Status : In progress</p>
+                  <button routerLink="/configure/choose-topics" type="button" class="btn  btn-primary">Configure</button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="buzz">bbb</div>
+        <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
       </div>
-      <div role="tabpanel" class="tab-pane fade" id="buzz">bbb</div>
-      <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
-    </div>
 
-  </div>
 </div>
