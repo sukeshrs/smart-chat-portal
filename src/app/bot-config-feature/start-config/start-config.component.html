@@ -1,17 +1,19 @@
 <div>
     <div class="card text-center">
-      <!--Card content-->
+        <!--Card content-->
         <div class="card-body">
-            <div class="md-form">
-                <input mdbActive type="text" id="form1" class="form-control">
-                <label for="form1" class="">Name</label>
-            </div>
+            <form #startBotCreationForm="ngForm">
+                <div class="md-form">
+                    <input mdbActive type="text" id="bot-name"  [(ngModel)]="name.botName" name="botName" class="form-control">
+                    <label for="form1" class="">Name</label>
+                </div>
 
-            <div class="md-form">
-                <input mdbActive type="text" id="form1" class="form-control">
-                <label for="form1" class="">Description</label>
-            </div>
-            <button routerLink="/configure/choose-topics" type="button" class="btn btn-indigo">Create Bot</button>
+                <div class="md-form">
+                    <input mdbActive type="text" id="bot-description" [(ngModel)]="name.botDesc" name="botDesc"  class="form-control">
+                    <label for="form1" class="">Description</label>
+                </div>
+                <button routerLink="/configure/choose-topics" type="button" (click)="startBotCreation()" class="btn btn-indigo">Create Bot</button>
+            </form>
         </div>
-     </div>
+    </div>
 </div>
