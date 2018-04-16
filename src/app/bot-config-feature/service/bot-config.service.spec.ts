@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { BotConfigService } from './bot-config-service.service';
+import { BotConfigService } from './bot-config.service';
 
 describe('BotConfigServiceService', () => {
   beforeEach(() => {

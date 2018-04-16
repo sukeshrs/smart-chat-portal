@@ -10,7 +10,7 @@ import { StartConfigComponent } from './start-config/start-config.component';
 import { TopicCustomNameComponent } from './topic-custom-name/topic-custom-name.component';
 import { TopicDetailsComponent } from './topic-details/topic-details.component';
 import { BotConfigDashboardComponent } from './bot-config-dashboard/bot-config-dashboard.component';
-import { BotConfigService } from './service/bot-config-service.service';
+import { BotConfigService } from './service/bot-config.service';
 
 @NgModule({
   imports: [
