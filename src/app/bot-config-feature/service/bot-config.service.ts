@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpParams } from "@angular/common/http";
-import { BotConfigRespository } from "../model/bot-config-repository.model"
+import { BotConfigRespository } from "../model/bot-config-repository.model";
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-
 @Injectable()
 export class BotConfigService {
 
@@ -15,6 +14,12 @@ export class BotConfigService {
     return this.http
       .post<BotConfigRespository>(this.botConfigURL, configInput)
       .map(result => result)
+  }
+
+  getBotConfigList(): Observable<BotConfigRespository[]>{
+    return this.http
+    .get<BotConfigRespository[]>(this.botConfigURL)
+    .map(result => result);
   }
 
 

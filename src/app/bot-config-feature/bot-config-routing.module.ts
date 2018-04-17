@@ -14,7 +14,7 @@ const botConfigRoutes: Routes = [
     component: BotConfigDashboardComponent,
   },
   {
-    path: 'configure',
+    path: 'configure/:id',
     component: BotConfigComponent,
     children: [
       {path: 'create-bot', component: StartConfigComponent},

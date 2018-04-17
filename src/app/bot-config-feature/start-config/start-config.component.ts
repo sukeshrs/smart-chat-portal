@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Name } from "../model/name.model";
 import { BotConfigRespository } from "../model/bot-config-repository.model"
 import { BotConfig } from "../model/bot-config.model"
-import { BotConfigService } from "../service/bot-config-service.service"
+import { BotConfigService } from "../service/bot-config.service"
 @Component({
   selector: 'start-config',
   templateUrl: './start-config.component.html',
