@@ -7,6 +7,7 @@ import { Analytics } from "../analytics-feature/model/analytics.model";
 export class ModelService {
   accountResponse: Account[];
   analyticsResponse: Analytics;
+  customer_id : string = '99999999';
   constructor() { }
 
 }
