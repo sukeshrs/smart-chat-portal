@@ -3,6 +3,8 @@ import { Name } from "../model/name.model";
 import { BotConfigRespository } from "../model/bot-config-repository.model"
 import { BotConfig } from "../model/bot-config.model"
 import { BotConfigService } from "../service/bot-config.service"
+import { ModelService } from "../../model/model.service";
+
 @Component({
   selector: 'start-config',
   templateUrl: './start-config.component.html',
@@ -13,30 +15,40 @@ export class StartConfigComponent implements OnInit {
   public name: Name;
   public botDetails : BotConfigRespository;
 
-  constructor(private botConfigService : BotConfigService ) { }
+  constructor(private botConfigService : BotConfigService,
+  private modelService : ModelService ) { }
 
   ngOnInit() {
-    if (!this.name) {
+
+    console.log(this.modelService.botConfigRespository);
+
+    if (this.modelService.currentBot) {
       this.name = {
         botName: '',
         botDesc: ''
       };
+    } else {
+      this.name = {
+        botName: this.modelService.currentBot.value.name.botName,
+        botDesc: this.modelService.currentBot.value.name.botDesc
+      };
     }
+
   }
 
   startBotCreation() {
     console.log(this.name);
-    let botCongigRepo: BotConfigRespository;
+    let botConfigRepo: BotConfigRespository;
     let value: BotConfig;
     value = { name: this.name };
-    botCongigRepo = {
+    botConfigRepo = {
       botId: '2',
       stepConfig: 'name',
       value: value,
       status: 'N'
     };
 
-    this.botConfigService.startBotCreation(botCongigRepo).subscribe(
+    this.botConfigService.startBotCreation(botConfigRepo).subscribe(
       data => {
         this.botDetails = data;
       },

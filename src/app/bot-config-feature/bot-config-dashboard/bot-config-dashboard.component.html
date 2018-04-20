@@ -15,7 +15,7 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade in active show" id="profile">
           <div class="mt-2 text-right">
-            <button [routerLink]="['/configure', 'new', 'create-bot']" type="button" class="btn  btn-primary">Create New</button>
+            <button type="button" class="btn  btn-primary" (click)="createNewBot()">Create New</button>
           </div>
           <div class="row">
             <div class="col-md-3" *ngFor="let botConfig of botConfigList">
@@ -25,7 +25,7 @@
                 <div class="card-body text-center">
                   <h4 class="card-title text-center">{{botConfig.value.name.botName}}</h4>
                   <p class="card-text text-center">Status : Completed</p>
-                  <button [routerLink]="['/configure',botConfig.botId,'create-bot']" type="button" class="btn  btn-primary">Edit Bot</button>
+                  <button type="button" class="btn  btn-primary" (click) = "editBot(botConfig)">Edit Bot</button>
                 </div>
 
               </div>
@@ -36,7 +36,7 @@
                 <div class="card-body text-center">
                   <h4 class="card-title text-center">{{botConfig.value.name.botName}}</h4>
                   <p class="card-text">Status : In progress</p>
-                  <button [routerLink]="['/configure',botConfig.botId,'choose-topics']" type="button" class="btn  btn-primary">Configure</button>
+                  <button type="button" class="btn  btn-primary"  (click) = "configureBot(botConfig)" >Configure</button>
                 </div>
               </div>
             </ng-template>
